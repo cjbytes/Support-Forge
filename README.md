@@ -16,10 +16,7 @@ Run:
   python qt_app.py
 
 What is included:
-  - Web UI with chat, research guide, tools, SpecLab, and SentinelBench
+  - qtUI with chat, research guide, tools, SpecLab, and SentinelBench
   - Desktop UI alternative
   - Safe runtime tools and session metrics
   - Model registry in models.json
-
-Notes:
-  - `cipher-fellows/` is a separate research project.
