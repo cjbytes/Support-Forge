@@ -7,7 +7,7 @@ import json
 
 def test_portfolio_analyzer_loads_results():
     """Portfolio analyzer can load JSON results from all projects"""
-    from portfolio_analyzer.analyzer import PortfolioAnalyzer
+    from notebooks.portfolio_analyzer.analyzer import PortfolioAnalyzer
 
     analyzer = PortfolioAnalyzer()
 
@@ -22,7 +22,7 @@ def test_portfolio_analyzer_loads_results():
 
 def test_orchestrator_can_execute():
     """Research Orchestrator initializes without errors"""
-    from research_orchestrator.orchestrator import ResearchOrchestrator
+    from research_main.orchestrator import ResearchOrchestrator
 
     orch = ResearchOrchestrator()
 
@@ -32,7 +32,7 @@ def test_orchestrator_can_execute():
 
 def test_comparator_generates_dashboard_data():
     """Interactive Comparator generates dashboard data structure"""
-    from interactive_compare.comparator import InteractiveComparator
+    from research_main.interactive_compare.comparator import InteractiveComparator
 
     comp = InteractiveComparator()
     data = comp.generate_comparison_dashboard_data()
@@ -64,9 +64,9 @@ def test_imports_all_modules():
         from speclab.runner import run_speclab
         from sentinelbench.runner import run_sentinelbench
         from skillforge.runner import run_skillforge
-        from portfolio_analyzer.analyzer import PortfolioAnalyzer
-        from research_orchestrator.orchestrator import ResearchOrchestrator
-        from interactive_compare.comparator import InteractiveComparator
+        from notebooks.portfolio_analyzer.analyzer import PortfolioAnalyzer
+        from research_main.orchestrator import ResearchOrchestrator
+        from research_main.interactive_compare.comparator import InteractiveComparator
 
         # If we got here, all imports succeeded
         assert True

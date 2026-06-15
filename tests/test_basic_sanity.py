@@ -19,17 +19,17 @@ class TestModuleImports:
         assert callable(run_skillforge)
 
     def test_portfolio_analyzer_import(self):
-        from portfolio_analyzer.analyzer import PortfolioAnalyzer
+        from notebooks.portfolio_analyzer.analyzer import PortfolioAnalyzer
         analyzer = PortfolioAnalyzer()
         assert hasattr(analyzer, 'generate_portfolio_report')
 
     def test_orchestrator_import(self):
-        from research_orchestrator.orchestrator import ResearchOrchestrator
+        from research_main.orchestrator import ResearchOrchestrator
         orch = ResearchOrchestrator()
         assert hasattr(orch, 'run_all_projects')
 
     def test_comparator_import(self):
-        from interactive_compare.comparator import InteractiveComparator
+        from research_main.interactive_compare.comparator import InteractiveComparator
         comp = InteractiveComparator()
         assert hasattr(comp, 'generate_comparison_dashboard_data')
 
